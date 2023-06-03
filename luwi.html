@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even Numbers</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    
+    h1 {
+      color: #2f6699;
+    }
+    
+    .even-numbers {
+      margin: 0 auto;
+      max-width: 300px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .even-number {
+      width: 50px;
+      height: 50px;
+      background-color: #9b12d1;
+      color: rgb(13, 20, 7);
+      font-size: 20px;
+      line-height: 50px;
+      margin: 5px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>ლუწი რიცხვები,1-დან 20-მდე:</h1>
+  <div class="even-numbers"></div>
+
+  <script>
+    var evenNumbersContainer = document.querySelector('.even-numbers');
+
+    for (var i = 2; i <= 20; i += 2) {
+      var evenNumberElement = document.createElement('div');
+      evenNumberElement.classList.add('even-number');
+      evenNumberElement.textContent = i;
+      evenNumbersContainer.appendChild(evenNumberElement);
+    }
+  </script>
+</body>
+</html>
